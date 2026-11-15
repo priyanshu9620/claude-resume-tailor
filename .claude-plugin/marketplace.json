@@ -1,0 +1,12 @@
+{
+  "name": "priyanshu-skills",
+  "description": "Personal Claude Code skills — starting with resume-tailor.",
+  "owner": { "name": "priyanshu9620", "url": "https://github.com/priyanshu9620" },
+  "plugins": [
+    {
+      "name": "resume-tailor",
+      "source": "./",
+      "description": "Tailor a one-page LaTeX resume to a job description without changing its length or formatting."
+    }
+  ]
+}

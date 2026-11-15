@@ -1,0 +1,10 @@
+{
+  "name": "resume-tailor",
+  "description": "Tailor a one-page LaTeX resume to a job description without changing its length or formatting.",
+  "version": "1.0.0",
+  "author": { "name": "priyanshu9620", "url": "https://github.com/priyanshu9620" },
+  "homepage": "https://github.com/priyanshu9620/claude-resume-tailor",
+  "repository": "https://github.com/priyanshu9620/claude-resume-tailor",
+  "license": "MIT",
+  "keywords": ["resume", "cv", "latex", "job-description", "ats", "overleaf"]
+}
