@@ -44,6 +44,11 @@ run's resume or JD.
 5. **Enforcement is automated, not trusted to judgement.** Rules 2–4 are checked by
    the scripts below. If a check fails, fix and re-check — do **not** hand back output
    that failed a check.
+6. **Always deliver the full code first, then the exact changes.** Your reply must
+   contain the COMPLETE updated `.tex` in one copy-paste code block FIRST, then a
+   precise list of every change (per-line old → new). Never return only a description,
+   and never withhold the code waiting for approval — the user judges from the
+   delivered code and reprompts (e.g. "revert line 123", "also work in on-call").
 
 > **Why rule 2 is the real one-page guarantee:** `tectonic` uses XeTeX, but Overleaf
 > defaults to pdflatex, and with font packages (e.g. `times`) they can differ by a
@@ -81,16 +86,22 @@ run's resume or JD.
    ```
    where `$B` is the baseline page count from step 3 (tailored must be ≤ baseline).
    If either fails, shorten the offending lines and repeat until both pass.
-7. **Review gate.** Show the user: the per-line diff, each char delta, the keyword
-   coverage, and the Gaps list. Let them approve or reject individual edits.
-8. **Deliver** the final updated LaTeX (as a copy-paste code block; offer to also save
-   it to a file). Confirm "validated: structure unchanged, within budget, 1 page".
+7. **Deliver the full updated `.tex` in your reply** — the complete file in one
+   copy-paste code block, so the user has the result in hand immediately. (Offer to
+   also save it to a file.)
+8. **Then state exactly what changed** so the user can judge and reprompt: a per-line
+   old → new list with char deltas, the keyword coverage, the Gaps list, and the check
+   results. Do NOT gate the code behind an approval step — the user reviews the
+   delivered output and reprompts for any change (revert a line, add a keyword, etc.).
 
 ## Output / report format
 
-- **Updated LaTeX** (full file, ready to paste back into Overleaf).
+Order matters: **the full updated LaTeX comes first, the change list second.**
+
+- **Updated LaTeX** (the COMPLETE file in one code block, ready to paste into Overleaf).
+- **Exactly what changed:** a per-line old → new list with char deltas (so the user can
+  judge each edit and reprompt).
 - **Keyword coverage:** X of Y JD keywords now present (list which, and where).
-- **Changed lines:** old → new with char deltas.
 - **Gaps (not inserted):** JD keywords with no basis in the resume, with a one-line
   note on each (ignore / worth genuinely acquiring).
 - **Checks:** `validate.py PASS` (structure + char budget) + `pagecheck.py` tailored
