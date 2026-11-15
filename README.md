@@ -27,7 +27,16 @@ honestly cover.
 
 ## Install
 
-### Option A — one command (recommended)
+### Easiest — let Claude set it up for you
+
+Open this repo in Claude Code (or just paste the repo URL) and say:
+
+> **"Read SETUP.md from github.com/priyanshu9620/claude-resume-tailor and set it up."**
+
+[`SETUP.md`](SETUP.md) is written for a Claude Code agent — it checks prerequisites,
+installs the plugin, optionally enables the LaTeX page-check, and verifies the result.
+
+### Option A — one command (recommended, manual)
 
 In a Claude Code session:
 ```
